@@ -20,7 +20,6 @@ int checkStr(const char *str, const char *to_check)
 
 char getNumber(const char *str)
 {
-    // printf("%s\n", str);
     if (checkStr(str, "zero") == 0 || str[0] == '0')
         return '0';
     if (checkStr(str, "one") == 0 || str[0] == '1')
@@ -41,7 +40,7 @@ char getNumber(const char *str)
         return '8';
     if (checkStr(str, "nine") == 0 || str[0] == '9')
         return '9';
-    return -1; // Si no se encuentra ninguna palabra correspondiente
+    return -1;
 }
 
 int main(int argc, char *argv[])
