@@ -4,6 +4,9 @@
 int str_in_str(const char *haystack, const char *needle);
 int checkStr(const char *str, const char *to_check);
 
+int isDigit(char c);
+int getDigits(const char *str);
+char getNumDigits(const char *str);
 char getNumber(const char *str);
 int findChar(const char *str, char c);
 

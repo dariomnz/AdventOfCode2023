@@ -41,9 +41,8 @@ int TxtFile_Print(struct TxtFile *to_print)
 {
     for (int i = 0; i < to_print->n_lines; i++)
     {
-        printf("%s", TxtFile_GetLine(to_print, i));
+        printf("%s\n", TxtFile_GetLine(to_print, i));
     }
-    printf("\n");
 }
 
 int TxtFile_Free(struct TxtFile *to_free)

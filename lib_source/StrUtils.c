@@ -41,6 +41,53 @@ int checkStr(const char *str, const char *to_check)
     return 0;
 }
 
+int isDigit(char c)
+{
+    if (c >= '0' && c <= '9')
+        return 0;
+    return -1;
+}
+
+int getDigits(const char *str)
+{
+    int num = 0;
+    char buffer[20] = {0};
+    if (isDigit(str[0]) != 0)
+        return -1;
+    for (int i = 0; i < strlen(str); i++)
+    {
+        if (isDigit(str[i]) == 0)
+        {
+            buffer[i] = str[i];
+        }
+        else
+        {
+            break;
+        }
+    }
+    num = atoi(buffer);
+    if (num == 0)
+        return -1;
+    return num;
+}
+
+char getNumDigits(const char *str)
+{
+    int num = 0;
+    for (int i = 0; i < strlen(str); i++)
+    {
+        if (isDigit(str[i]) == 0)
+        {
+            num++;
+        }
+        else
+        {
+            return num;
+        }
+    }
+    return num;
+}
+
 char getNumber(const char *str)
 {
     // printf("%s\n", str);
